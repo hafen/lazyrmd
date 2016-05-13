@@ -39,8 +39,3 @@
     transform: rotate(360deg);
   }
 }
-
-.reveal-hidden {
-  opacity: 0;
-  transition: all 500ms ease-in;
-}

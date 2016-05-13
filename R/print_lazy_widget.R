@@ -4,12 +4,13 @@
 #' @importFrom digest digest
 print_lazy_widget <- function(p, dir = "lazy_widgets", options = NULL) {
 
-  out_dir <- file.path(dir, digest::digest(p))
-  if(!file.exists(out_dir))
-    dir.create(out_dir, recursive = TRUE)
+  if(!file.exists(dir))
+    dir.create(dir, recursive = TRUE)
+
+  filename <- paste0(digest::digest(p), ".html")
 
   a <- htmlwidgets:::toHTML(p, standalone = FALSE, knitrOptions = options)
-  htmltools::save_html(a, file = file.path(normalizePath(out_dir), "index.html"))
+  htmltools::save_html(a, file = file.path(normalizePath(dir), filename))
 
   # htmlwidgets::saveWidget(p, file = file.path(normalizePath(dir), "index.html"))
 
@@ -25,7 +26,7 @@ print_lazy_widget <- function(p, dir = "lazy_widgets", options = NULL) {
       mozallowfullscreen = "",
       allowfullscreen = "",
       sandbox = "allow-forms allow-scripts allow-popups allow-same-origin allow-pointer-lock",
-      "data-src" = sprintf("%s/index.html", out_dir)
+      "data-src" = file.path(dir, filename)
     )
   )
   knitr::knit_print(res, options = options)
