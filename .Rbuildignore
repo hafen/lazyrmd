@@ -1,0 +1,9 @@
+^.*\.Rproj$
+^\.Rproj\.user$
+\.git
+^\.travis\.yml$
+\.DS_Store
+..Rcheck
+CONTRIBUTING\.md
+^_ignore$
+\.sublime\-
