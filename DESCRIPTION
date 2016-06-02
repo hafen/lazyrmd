@@ -10,7 +10,7 @@ Description: An R Markdown html document format that provides the ability to laz
     Markdown documents with many plots, as it allows for a fast initial page load and
     defers loading of individual graphics to the time that the user navigates near them.
 Depends:
-    R (>= 3.2.4)
+    R (>= 3.2.3)
 License: MIT + file LICENSE
 URL: http://github.com/hafen/lazyrmd
 BugReports: https://github.com/hafen/lazyrmd/issues
