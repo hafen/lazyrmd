@@ -19,7 +19,7 @@ devtools::install_github("hafen/lazyrmd")
 
 ## Usage
 
-To enable lazy loading, you need to do two things to your R Markdown document:
+To enable lazy loading, you need to do two things in your R Markdown document:
 
 1. Change your output format from `html_document` to `lazyhtml_document` in the front-matter of your document, e.g.:
 
