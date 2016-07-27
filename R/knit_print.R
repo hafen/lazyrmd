@@ -5,10 +5,12 @@
 #' @param options knitr options
 #'
 #' @export
+#' @importFrom utils getFromNamespace
 knit_print.htmlwidget <- function (x, ..., options = NULL) {
-  if(!is.null(options$lazy) && options$lazy) {
+  if (!is.null(options$lazy) && options$lazy) {
     print_lazy_widget(x, options = options)
   } else {
-    htmlwidgets:::knit_print.htmlwidget(x, ..., options = options)
+    print_widget <- getFromNamespace("knit_print.htmlwidget", "htmlwidgets")
+    print_widget(x, ..., options = options)
   }
 }
