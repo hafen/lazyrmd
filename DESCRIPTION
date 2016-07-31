@@ -20,8 +20,7 @@ Imports:
     htmlwidgets,
     digest,
     htmltools
-Suggests:
-  networkD3
+Suggests: networkD3
 LazyData: true
 RoxygenNote: 5.0.1
 Suggests: testthat
