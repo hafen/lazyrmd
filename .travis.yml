@@ -7,7 +7,11 @@ r_binary_packages:
 #   # install locally to avoid rev dep
 #   - covr # code coverage check
   - lintr # code lint
-#
+
+before_script:
+  # install the pkg so it can be used as a vig builder (only necessary for packagedocs)
+  - Rscript -e "devtools::install()"
+
 # after_success:
 #   - Rscript -e 'covr::codecov()'
 
