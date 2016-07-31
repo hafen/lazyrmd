@@ -1,0 +1,8 @@
+linters: with_defaults(
+    line_length_linter(100),
+    commented_code_linter = NULL,
+    NULL
+  )
+exclusions:
+  list(
+  )
