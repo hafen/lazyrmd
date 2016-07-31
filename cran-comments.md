@@ -1,5 +1,23 @@
 ## Comments
 
+Shrank and updated the LICENSE file to match the DESCRIPTION authors.
+
+Thank you for the help!
+
+Best,
+Ryan
+
+
+### Reply
+
+So there are also other copyright holders, no?
+Please also skip the rest of the license file, the first two lines are sufficient here.
+
+Best,
+Uwe
+
+### Original
+
 Thank you for your time!
 
 Best,
