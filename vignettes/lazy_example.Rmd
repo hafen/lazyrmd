@@ -1,0 +1,38 @@
+---
+title: "lazyrmd example"
+author: Barret Schloerke
+date: July 30, 2016
+output: lazyrmd::lazyhtml_document
+vignette: |
+  %\VignetteIndexEntry{lazyrmd_example}
+  %\VignetteEngine{knitr::rmarkdown}
+---
+
+
+Put a lot of space in between so that you have to scroll...
+
+<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+
+Set up data
+
+```{r}
+library(networkD3)
+# Create fake data
+src <- c("A", "A", "A", "A", "B", "B", "C", "C", "D")
+target <- c("B", "C", "D", "J", "E", "F", "G", "H", "I")
+networkData <- data.frame(src, target)
+```
+
+Loads immediately (did not wiggle when scrolling into view)
+
+```{r, lazy = FALSE}
+# Plot
+simpleNetwork(networkData)
+```
+
+Lazy loads (wiggled when scrolling into view)
+
+```{r, lazy = TRUE}
+# Plot
+simpleNetwork(networkData)
+```
