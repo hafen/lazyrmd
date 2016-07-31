@@ -16,6 +16,8 @@ html_dependency_recliner <- function() {
 #' @param \ldots parameters passed to \code{\link[rmarkdown]{html_document}}
 #' @importFrom rmarkdown html_document html_dependency_jquery
 #' @export
+#' @examples
+#' if (interactive()) browseURL("https://github.com/hafen/lazyrmd#usage")
 lazyhtml_document <- function(...) {
   dots <- list(...)
   dots$extra_dependencies <- c(dots$extra_dependencies,

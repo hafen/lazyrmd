@@ -12,4 +12,7 @@ lazyhtml_document(...)
 \description{
 Format for converting from R Markdown to an HTML document with lazy loading of graphics
 }
+\examples{
+if (interactive()) browseURL("https://github.com/hafen/lazyrmd#usage")
+}
 
