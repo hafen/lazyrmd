@@ -7,3 +7,5 @@
 CONTRIBUTING\.md
 ^_ignore$
 \.sublime\-
+^cran-comments\.md$
+\.lintr

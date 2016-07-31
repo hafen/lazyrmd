@@ -25,8 +25,13 @@ print_lazy_widget <- function(p, dir = "lazy_widgets", options = NULL) {
   res <- htmltools::tags$div(
     style = sprintf("display: flex; width: %dpx; height: %dpx; overflow: hidden",
       p$width + 20, p$height + 20),
-    htmltools::tags$div(style = sprintf("background: white; position: absolute; top: 0px, left: 0px; width: %dpx; height: %dpx;",
-      p$width + 20, p$height + 20)),
+    htmltools::tags$div(
+      style = sprintf(
+        "background: white; position: absolute; top: 0px, left: 0px; width: %dpx; height: %dpx;",
+        p$width + 20,
+        p$height + 20
+      )
+    ),
     htmltools::tags$iframe(
       class = "widget-lazyload lazy-loading",
       width = p$width + 20,

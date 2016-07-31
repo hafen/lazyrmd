@@ -1,5 +1,5 @@
-lazyrmd
--------
+# lazyrmd [![Build Status](https://travis-ci.org/hafen/lazyrmd.svg?branch=master)](https://travis-ci.org/hafen/lazyrmd)
+
 
 The lazyrmd R package provides an R Markdown html output format that enables plot outputs in the document to be lazily loaded.  It is useful for large R Markdown documents with many plots, as it allows for a fast initial page load, deferring the loading of individual graphics to the time that the user navigates near them.
 
