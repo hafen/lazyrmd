@@ -8,10 +8,6 @@ r_binary_packages:
 #   - covr # code coverage check
   - lintr # code lint
 
-before_script:
-  # install the pkg so it can be used as a vig builder (only necessary for packagedocs)
-  - Rscript -e "devtools::install(dependencies = TRUE)"
-
 # after_success:
 #   - Rscript -e 'covr::codecov()'
 
