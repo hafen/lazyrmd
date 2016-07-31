@@ -9,10 +9,16 @@ Ryan
 ## R CMD check results
 #### Test environments and R CMD check results
 
-Test Environments (all same result)
-* local OS X install (x86_64-apple-darwin13.4.0), R 3.3.1
+Test Environments
 * travis-ci - ubuntu 12.04 (on travis-ci, x86_64-pc-linux-gnu), R 3.3.1
+  * 0 errors | 0 warnings | 0 notes
+* local OS X install (x86_64-apple-darwin13.4.0), R 3.3.1
+  * 0 errors | 0 warnings | 1 note
+  * Did not include possibly mis-spelled words
+  * See next section
 * win-builder (devel and release)
+  * 0 errors | 0 warnings | 1 note
+  * See next section
 
 Test Results
 * 0 errors | 0 warnings | 1 note
