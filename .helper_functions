@@ -1,0 +1,9 @@
+knit_vignettes:
+  kvs <- function() {
+    library(magrittr)
+    dir("vigs", full.names = TRUE) %>%
+      subset(., grepl(".Rmd", .)) %>%
+      lapply(rmarkdown::render) %>%
+      unlist()
+  }
+  kvs()
