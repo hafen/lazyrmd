@@ -1,0 +1,18 @@
+---
+title: "lazyrmd example"
+author: Barret Schloerke
+date: July 30, 2016
+output: rmarkdown::html_vignette
+vignette: |
+  %\VignetteIndexEntry{lazyrmd_example}
+  %\VignetteEngine{knitr::rmarkdown}
+---
+
+<meta
+  http-equiv="refresh"
+  content="0; URL='http://hafen.github.io/lazyrmd/lazy_example.html'"
+/>
+
+# lazyrmd example
+
+If not automatically redirected, please visit (http://hafen.github.io/lazyrmd/lazy_example.html) for the latest vignette.
