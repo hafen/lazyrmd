@@ -2,7 +2,7 @@
 title: "lazyrmd example"
 author: Barret Schloerke
 date: July 30, 2016
-output: lazyrmd::lazyhtml_document
+output: lazyrmd::lazy_render
 vignette: |
   %\VignetteIndexEntry{lazyrmd_example}
   %\VignetteEngine{knitr::rmarkdown}
