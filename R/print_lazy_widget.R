@@ -44,5 +44,12 @@ print_lazy_widget <- function(p, dir = "lazy_widgets", options = NULL) {
       "data-src" = file.path(dir, filename)
     )
   )
+  res <- htmltools::attachDependencies(
+    res,
+    list(
+      html_dependency_jquery(),
+      html_dependency_recliner()
+    )
+  )
   knitr::knit_print(res, options = options)
 }
