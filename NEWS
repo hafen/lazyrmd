@@ -1,0 +1,17 @@
+Version 0.1.1
+----------------------------------------------------------------------
+
+Feature
+
+- Renamed render method lazyhtml_document to lazy_render. Now supports all rmarkdown render methods
+- lazy depends upon recliner. If no lazy tags are used, the dependency is not required
+
+Vignette
+
+- fixed CRAN issue where vignette was missing files
+
+
+Version 0.1
+----------------------------------------------------------------------
+
+- Intial release (0.1.0)

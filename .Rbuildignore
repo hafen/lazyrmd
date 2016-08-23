@@ -9,3 +9,5 @@ CONTRIBUTING\.md
 \.sublime\-
 ^cran-comments\.md$
 \.lintr
+^\.helper_functions$
+^vigs$

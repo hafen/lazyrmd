@@ -11,17 +11,20 @@ html_dependency_recliner <- function() {
   )
 }
 
+
 #' Format for converting from R Markdown to an HTML document with lazy loading of graphics
 #'
-#' @param \ldots parameters passed to \code{\link[rmarkdown]{html_document}}
-#' @importFrom rmarkdown html_document html_dependency_jquery
+#' @param \ldots parameters passed to rmarkdown's function matching the parameter \code{rmarkdown}
+#' @param rmarkdown rmarkdown function to use to compile the document.  Defaults to \code{\link[rmarkdown]{html_document}}
+#' @import rmarkdown
 #' @export
 #' @examples
 #' if (interactive()) browseURL("https://github.com/hafen/lazyrmd#usage")
-lazyhtml_document <- function(...) {
+lazy_render <- function(..., rmarkdown = "html_document") {
   dots <- list(...)
-  dots$extra_dependencies <- c(dots$extra_dependencies,
-    list(html_dependency_jquery(), html_dependency_recliner()))
+  # dots$extra_dependencies <- c(dots$extra_dependencies,
+  #   list(html_dependency_jquery(), html_dependency_recliner()))
 
-  do.call(rmarkdown::html_document, dots)
+  render_fn <- get(rmarkdown, envir = loadNamespace("rmarkdown"))
+  do.call(render_fn, dots)
 }

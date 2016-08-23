@@ -1,9 +1,9 @@
 Package: lazyrmd
 Title: Render R Markdown Outputs Lazily
-Version: 0.1.0
+Version: 0.1.1
 Authors@R: c(
     person("Ryan", "Hafen", email = "rhafen@gmail.com", role = c("aut", "cre")),
-    person("Barret", "Schloerke", email = "schloerke@gmail.com", role = c("ctb")),
+    person("Barret", "Schloerke", email = "schloerke@gmail.com", role = c("aut")),
     person("jQuery Foundation", role = c("ctb", "cph"), comment = "jQuery.js library"),
     person("Sourcey", role = c("ctb", "cph"), comment = "recliner.js library"))
 Description: An R Markdown html document format that provides the ability to lazily
