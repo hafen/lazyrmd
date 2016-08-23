@@ -8,8 +8,12 @@ r_binary_packages:
 #   - covr # code coverage check
   - lintr # code lint
 
-# after_success:
+r_github_packages:
+  - HBGDki/travisDrat
+
+after_success:
 #   - Rscript -e 'covr::codecov()'
+  - Rscript -e "travisDrat::deploy_drat('HBGDki/drat')"
 
 notifications:
   email:
