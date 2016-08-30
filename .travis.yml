@@ -8,8 +8,12 @@ r_binary_packages:
 #   - covr # code coverage check
   - lintr # code lint
 
-# after_success:
+r_github_packages:
+  - schloerke/travisDrat
+
+after_success:
 #   - Rscript -e 'covr::codecov()'
+  - Rscript -e "travisDrat::deploy_drat()"
 
 notifications:
   email:
@@ -21,3 +25,7 @@ branches:
     - master
     - dev
     - travis
+
+env:
+  global:
+    secure: "aKFCFsHOQ2nrGZLLt3akHA6GUfk5BHSfUVfaRCHsuUJEqvAAYqnsfTcUf9oKODsUN5Q4VoPYBCxsXtlo2hiSNhrZI3XfQUT1v9ERetzhfV2P86QboDJOHLBEunOlEHIfB8TtRPwn1oEhxbbKkOXaMsUE3DdYHlqrXJKqT2LBg47STfgilnxwInSWb7VKhgjAlawGdxl9cVLaO+IPNZQKG4ZHLQEjZ7nMi5smiOJbA6PHbCjP0D175nRTiGcsORBp7rB1/UrU0YFfFqVh+dNZLsMTim88hW4t7Iel6WBnlR+1WA7PX0zQVHexo3An5yz4BE+B2i4BGfQxAXwtWi6kyrcvpVX4RYxwzx6gFNKQiii9g6TxXWHai9Qc5FpJo8kkFJoKllL4CzQoEB384He41EGBjIu7E02PlVptdJansilO2UbYtYylrYB6QGkmMI9+i1QzvpzOquFNASXF+1wBaFohBy+/vf8BX6yG0EhCQYoAlYFsmT9tSriioLi6GzFFx8XRzDrpxb/g3fOHu5/jmfk8sqBwNj8Oey6YDej1bYHKGLDZD79X4UM+fmgcQ2YBJewMphdX58nj1BtNH+qa7GOEivTwlqY5bMezBUFzPvFZ8g4qqBtpIoJW4wLGGDrk6DuLWRAsH6YfGwH+CcUVXsl06Rp14yG/BYObEbXQXKg="
