@@ -4,10 +4,13 @@
 \alias{lazy_render}
 \title{Format for converting from R Markdown to an HTML document with lazy loading of graphics}
 \usage{
-lazy_render(..., rmarkdown = "html_document")
+lazy_render(..., lazyrmd_render_fn = "html_document",
+  lazyrmd_render_package = "rmarkdown")
 }
 \arguments{
-\item{rmarkdown}{rmarkdown function to use to compile the document.  Defaults to \code{\link[rmarkdown]{html_document}}}
+\item{lazyrmd_render_fn}{function used to compile the document.  Paired with the \code{lazyrmd_render_package} parameter, it defaults to \code{\link[rmarkdown]{html_document}}.}
+
+\item{lazyrmd_render_package}{package used to look for the \code{lazyrmd_render_fn}.}
 
 \item{\ldots}{parameters passed to rmarkdown's function matching the parameter \code{rmarkdown}}
 }
