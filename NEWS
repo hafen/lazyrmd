@@ -1,9 +1,9 @@
-Version 0.1.1
+Version 0.2.0
 ----------------------------------------------------------------------
 
 Feature
 
-- Renamed render method lazyhtml_document to lazy_render. Now supports all rmarkdown render methods
+- Renamed render method lazyhtml_document to lazy_render. lazy_render supports any function and package combination to render a document
 - lazy depends upon recliner. If no lazy tags are used, the dependency is not required
 
 Vignette
