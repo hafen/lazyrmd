@@ -2,18 +2,25 @@
 title: "lazyrmd example"
 author: Barret Schloerke
 date: Aug 22, 2016
-output: lazyrmd::lazy_render
+output:
+  lazyrmd::lazy_render:
+#    lazyrmd_render_fn: html_document # default
+#    lazyrmd_render_package: rmarkdown # default
+    # params supplied to rmarkdown::html_document
+    toc: true
+    toc_depth: 1
 vignette: |
   %\VignetteIndexEntry{lazyrmd_example}
   %\VignetteEngine{knitr::rmarkdown}
 ---
 
 
-Put a lot of space in between so that you have to scroll...
+Put a lot of space in between so that you have to scroll...  (Click the "Lazy Load" link to jump down the page)
 
 <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
 
-Set up data
+## Init Data
 
 ```{r}
 library(networkD3)
@@ -23,12 +30,16 @@ target <- c("B", "C", "D", "J", "E", "F", "G", "H", "I")
 networkData <- data.frame(src, target)
 ```
 
+## Direct Load
+
 Loads immediately (did not wiggle when scrolling into view)
 
 ```{r, lazy = FALSE}
 # Plot
 simpleNetwork(networkData)
 ```
+
+# Lazy Load
 
 Lazy loads (wiggled when scrolling into view)
 
