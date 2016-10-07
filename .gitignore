@@ -5,3 +5,4 @@ inst/doc
 vignettes/lazy_widgets
 vigs/*.html
 vigs/lazy_widgets
+.DS_Store
