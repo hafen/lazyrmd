@@ -9,11 +9,11 @@ r_binary_packages:
   - lintr # code lint
 
 r_github_packages:
-  - HBGDki/travisDrat
+  - schloerke/travisDrat
 
 after_success:
 #   - Rscript -e 'covr::codecov()'
-  - Rscript -e "travisDrat::deploy_drat('HBGDki/drat')"
+  - Rscript -e "travisDrat::deploy_drat()"
 
 notifications:
   email:
@@ -28,4 +28,4 @@ branches:
 
 env:
   global:
-    secure: "I8tVolqomuTXTbv3U5LfGfAxoDO7nFvD6b+0uqZs8NUkaOn/NN24gtlOln4ovQKWYKZqOQAS0C6q52WI+hwdiAPv9s5PSQZPqbE0aqVzUyQRM+NXMBS+S/E3g2TVIzpER5kLFK+j9FKjf6M6jlYJ4l6PTzzdvLkIvNfE1BXsCnldXwaKbMPOxeHd7I+nS+wj+Qirdv6wxxDkUFtQmyn062OBuoXGX7lg6Eq8nfX7JKRGwS7OegIDbtcbmuQYWRqdRy7Vjjx4pPABxgyiowFVsn3n4Z5YY1tGQwfhMuq7IICcLlQ00p6KyOp/ovg4p0gTOQY1u4ykrRMEoq/noPzCCmq7IkyF5+CHiV3wUaRRHc7cHr5Zh9NTZC9GpIua9Gfzq3Ne1JpaOm4ep1uAxbacac2SVEr6KWDw6wDuZerJGslns03fkICUgdP77Tv4IvZJHYRVC/K1fYfLvMx9MRYu3yEuqc89o26nPU0DoHTeHGwxdpH8oVQP7wYxh7nxGA0LUZb0Tjq7gAyMNM61PtV6vef9b1bQXlw5hkCv1ExZeaCeL9Ch5A/EYThgbWTqVOZBLUqqzCqjuunD6xBiC/7LxWNdyIF/kx+zjCJ3JL4NvWgfpTbfK/gQ0Lno3xXkW8Wek0bt0tZnh1f+9nBoXjxe4mmtgz1YBWA9Zs+wicOiw28="
+    secure: "aKFCFsHOQ2nrGZLLt3akHA6GUfk5BHSfUVfaRCHsuUJEqvAAYqnsfTcUf9oKODsUN5Q4VoPYBCxsXtlo2hiSNhrZI3XfQUT1v9ERetzhfV2P86QboDJOHLBEunOlEHIfB8TtRPwn1oEhxbbKkOXaMsUE3DdYHlqrXJKqT2LBg47STfgilnxwInSWb7VKhgjAlawGdxl9cVLaO+IPNZQKG4ZHLQEjZ7nMi5smiOJbA6PHbCjP0D175nRTiGcsORBp7rB1/UrU0YFfFqVh+dNZLsMTim88hW4t7Iel6WBnlR+1WA7PX0zQVHexo3An5yz4BE+B2i4BGfQxAXwtWi6kyrcvpVX4RYxwzx6gFNKQiii9g6TxXWHai9Qc5FpJo8kkFJoKllL4CzQoEB384He41EGBjIu7E02PlVptdJansilO2UbYtYylrYB6QGkmMI9+i1QzvpzOquFNASXF+1wBaFohBy+/vf8BX6yG0EhCQYoAlYFsmT9tSriioLi6GzFFx8XRzDrpxb/g3fOHu5/jmfk8sqBwNj8Oey6YDej1bYHKGLDZD79X4UM+fmgcQ2YBJewMphdX58nj1BtNH+qa7GOEivTwlqY5bMezBUFzPvFZ8g4qqBtpIoJW4wLGGDrk6DuLWRAsH6YfGwH+CcUVXsl06Rp14yG/BYObEbXQXKg="

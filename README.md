@@ -21,17 +21,17 @@ devtools::install_github("hafen/lazyrmd")
 
 To enable lazy loading, you need to do two things in your R Markdown document:
 
-1. Change your output format from `html_document` to `lazyhtml_document` in the front-matter of your document, e.g.:
+1. Change your output format from `html_document` to `lazyrmd::lazy_render` in the front-matter of your document, e.g.:
 
     ```yaml
     ---
     title: "Lazy Loading Test"
     author: "Ryan Hafen"
-    output: lazyhtml_document
+    output: lazyrmd::lazy_render
     ---
     ```
 
-    Note that the `lazyhtml_document` is a wrapper around `html_document` so all front-matter options for `html_document` are valid for `lazyhtml_document`.
+    Note that the `lazyrmd::lazy_render` is a wrapper around `rmarkdown` so all front-matter options for `rmarkdown::html_document` are valid for `lazyrmd::lazy_render`.
 
 2. Add `lazy=TRUE` to any chunk whose output is an htmlwidget that you would like to have load lazily, e.g.:
 
