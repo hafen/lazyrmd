@@ -1,6 +1,6 @@
 Package: lazyrmd
 Title: Render R Markdown Outputs Lazily
-Version: 0.1.1
+Version: 0.2.0
 Authors@R: c(
     person("Ryan", "Hafen", email = "rhafen@gmail.com", role = c("aut", "cre")),
     person("Barret", "Schloerke", email = "schloerke@gmail.com", role = c("aut")),

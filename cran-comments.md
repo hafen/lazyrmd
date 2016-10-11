@@ -1,6 +1,8 @@
 ## Comments
 
-Made some updates to fix vignette display issues on CRAN.  Thank you for your time!
+Made some minor updates to extend the functionality and some updates to fix vignette display issues on CRAN.  Thank you for your time!
+
+There two vignette rendering warnings at https://cran.rstudio.com/web/checks/check_results_lazyrmd.html , but these are warnings caused by knitr.  (I am following rstudio's instructions on how to render a html_document here: http://rmarkdown.rstudio.com/package_vignette_format.html)
 
 Best,
 Ryan

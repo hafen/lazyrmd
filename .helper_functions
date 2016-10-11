@@ -1,5 +1,6 @@
 knit_vignettes:
   kvs <- function() {
+    load_all()
     library(magrittr)
     dir("vigs", full.names = TRUE) %>%
       subset(., grepl(".Rmd", .)) %>%
