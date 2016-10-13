@@ -6,7 +6,7 @@ The lazyrmd R package provides an R Markdown html output format that enables plo
 ## Installation
 
 ```r
-options(repos = c(tessera = "http://packages.tessera.io",
+options(repos = c(tessera = "http://packages.deltarho.org",
   getOption("repos")))
 install.packages("lazyrmd")
 ```
