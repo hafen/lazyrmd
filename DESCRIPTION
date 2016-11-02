@@ -1,11 +1,11 @@
 Package: lazyrmd
 Title: Render R Markdown Outputs Lazily
-Version: 0.2.0
+Version: 0.2.1
 Authors@R: c(
     person("Ryan", "Hafen", email = "rhafen@gmail.com", role = c("aut", "cre")),
     person("Barret", "Schloerke", email = "schloerke@gmail.com", role = c("aut")),
     person("jQuery Foundation", role = c("cph"), comment = "jQuery.js library"),
-    person("Sourcey", role = c("cph"), comment = "recliner.js library"))
+    person("Bermi", "Ferrer", role = c("cph"), comment = "jsonp-client library"))
 Description: An R Markdown html document format that provides the ability to lazily
     load plot outputs as the user scrolls over them.  This is useful for large R
     Markdown documents with many plots, as it allows for a fast initial page load and
@@ -20,7 +20,8 @@ Imports:
     rmarkdown,
     htmlwidgets,
     digest,
-    htmltools
+    htmltools,
+    jsonlite
 Suggests:
   testthat,
   networkD3

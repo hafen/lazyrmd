@@ -11,3 +11,4 @@ CONTRIBUTING\.md
 \.lintr
 ^\.helper_functions$
 ^vigs$
+^_gh-pages$

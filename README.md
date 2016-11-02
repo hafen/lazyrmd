@@ -1,5 +1,8 @@
-# lazyrmd [![Build Status](https://travis-ci.org/hafen/lazyrmd.svg?branch=master)](https://travis-ci.org/hafen/lazyrmd)
+# lazyrmd
 
+[![Build Status](https://travis-ci.org/hafen/lazyrmd.svg?branch=master)](https://travis-ci.org/hafen/lazyrmd)
+[![CRAN](http://www.r-pkg.org/badges/version/lazyrmd)](https://cran.r-project.org/package=lazyrmd)
+[![](http://cranlogs.r-pkg.org/badges/lazyrmd)](https://cran.r-project.org/package=lazyrmd)
 
 The lazyrmd R package provides an R Markdown html output format that enables plot outputs in the document to be lazily loaded.  It is useful for large R Markdown documents with many plots, as it allows for a fast initial page load, deferring the loading of individual graphics to the time that the user navigates near them.
 
@@ -27,13 +30,13 @@ To enable lazy loading, you need to do two things in your R Markdown document:
     ---
     title: "Lazy Loading Test"
     author: "Ryan Hafen"
-    output: lazyrmd::lazy_render
+    output:
+      html_document:
+        self_contained: false
     ---
     ```
 
-    Note that the `lazyrmd::lazy_render` is a wrapper around `rmarkdown` so all front-matter options for `rmarkdown::html_document` are valid for `lazyrmd::lazy_render`.
-
-2. Add `lazy=TRUE` to any chunk whose output is an htmlwidget that you would like to have load lazily, e.g.:
+2. Add `library(lazyrmd)` to the beginning of your document and then specify `lazy=TRUE` to any chunk whose output is an htmlwidget that you would like to have load lazily, e.g.:
 
         ```{r, lazy=TRUE}
         library(rbokeh)
@@ -55,6 +58,3 @@ Note that this approach is not possible with standalone html output - we must st
 
 For adding support for raster graphics output, I just need to get a little more acquainted with the `knit_print` method for these and the rest will be easy.
 
-## Acknowledgements
-
-This package uses the very lightweight [recliner.js](http://sourcey.com/recliner/) library to handle lazy loading.
