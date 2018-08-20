@@ -9,4 +9,3 @@ html_dependency_lazyload()
 \description{
 Provide HTML dependencies for lazyhtml R Markdown format
 }
-

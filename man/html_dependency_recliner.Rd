@@ -9,4 +9,3 @@ html_dependency_recliner()
 \description{
 Provide HTML dependencies for lazyhtml R Markdown format
 }
-

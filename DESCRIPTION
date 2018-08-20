@@ -24,7 +24,8 @@ Imports:
     jsonlite
 Suggests:
   testthat,
+  lintr,
   networkD3
 LazyData: true
-RoxygenNote: 5.0.1
+RoxygenNote: 6.1.0
 VignetteBuilder: knitr

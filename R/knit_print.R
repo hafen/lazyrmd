@@ -14,3 +14,20 @@ knit_print.htmlwidget <- function (x, ..., options = NULL) {
     print_widget(x, ..., options = options)
   }
 }
+
+# #' @export
+# knit_print.ggplot <- function(x, ..., options = NULL) {
+#   if (!is.null(options$lazy) && options$lazy) {
+#     knitr:::knit_print.default(x, ..., options = options)
+#   } else {
+#     knitr:::knit_print.default(x, ..., options = options)
+#   }
+# }
+
+# # p <- qplot(mpg, wt, data = mtcars, colour = I("red"))
+# # a <- knitr:::knit_print.default(p)
+
+# #' @export
+# hook_plot_md <- function(x, options) {
+#   message("wootywoot")
+# }

@@ -20,4 +20,3 @@ Format for converting from R Markdown to an HTML document with lazy loading of g
 \examples{
 if (interactive()) browseURL("https://github.com/hafen/lazyrmd#usage")
 }
-

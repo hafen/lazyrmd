@@ -16,4 +16,3 @@
 \description{
 A custom knitr print method for htmlwidgets
 }
-
